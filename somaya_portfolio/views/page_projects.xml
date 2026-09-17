@@ -4,6 +4,7 @@
     <template id="page_projects_list" name="Selected Projects">
         <t t-call="website.layout">
             <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+            <t t-set="additional_title" t-value="'مشاريع مختارة' if lang_code == 'ar_001' else 'Selected Projects'"/>
             <div id="wrap" class="o_somaya_projects_list">
 
                 <section class="o_somaya_page_header">
@@ -63,6 +64,7 @@
     <template id="page_project_detail" name="Project Case Study">
         <t t-call="website.layout">
             <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+            <t t-set="additional_title" t-value="project.name"/>
             <div id="wrap" class="o_somaya_project_detail">
 
                 <section class="o_somaya_project_detail_header">
