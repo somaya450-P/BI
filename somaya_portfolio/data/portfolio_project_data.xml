@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="project_01_donation" model="portfolio.project">
+        <field name="sequence">10</field>
+        <field name="number">01</field>
+        <field name="name">Donation Performance Dashboard</field>
+        <field name="overview">An interactive Power BI dashboard designed to analyze donation performance across campaigns. The dashboard provides an overview of key donation metrics while allowing users to explore donation activity by campaign type, year, month, and payment method.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Analyzed total donation amounts and donation activity across campaigns.</li>
+<li>Identified high-performing campaigns based on donation value.</li>
+<li>Analyzed monthly donation trends.</li>
+<li>Compared donation performance across campaign types.</li>
+<li>Analyzed donation distribution by payment method.</li>
+<li>Used KPI analysis to provide a concise overview of overall performance.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">Total Donations</span><span class="o_portfolio_highlight_value">SAR 1.53M</span></li>
+<li><span class="o_portfolio_highlight_label">Number of Donors</span><span class="o_portfolio_highlight_value">1K</span></li>
+<li><span class="o_portfolio_highlight_label">Average Donation Amount</span><span class="o_portfolio_highlight_value">SAR 37</span></li>
+<li><span class="o_portfolio_highlight_label">Highest Donation Amount</span><span class="o_portfolio_highlight_value">SAR 20K</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, KPI Analysis</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNDQzYTM5ZWEtNzUzMy00NmQwLWI2ZTYtOGUwNGE5OTZiY2U0IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7483125392791429120-9nY5?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-01-cover.svg</field>
+    </record>
+
+    <record id="project_02_madinah" model="portfolio.project">
+        <field name="sequence">20</field>
+        <field name="number">02</field>
+        <field name="name">Madinah Real Estate Market Analysis</field>
+        <field name="overview">An interactive Power BI dashboard analyzing real estate prices and annual rental trends across different areas of Madinah. The project provides insights into property prices, rental values, property classifications, and changes in the market between 2019 and 2024.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Analyzed average annual rental prices across different areas of Madinah.</li>
+<li>Compared rental prices between 2019 and 2024.</li>
+<li>Analyzed property prices based on location and property classification.</li>
+<li>Compared residential and commercial property categories.</li>
+<li>Examined annual rental trends from 2019 to 2024.</li>
+<li>Created interactive filtering by year, location, and property type.</li>
+</ul></field>
+        <field name="tools">Microsoft Excel, Power BI, KPI Analysis, Data Collection, Data Transformation</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiYzIxZTM4ZjUtOTAzYi00NDNiLThlYTItZGZjMTYwODlmNzc4IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7485971056294297601-iUHC?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-02-cover.svg</field>
+        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-02-alt.svg</field>
+    </record>
+
+    <record id="project_03_sales" model="portfolio.project">
+        <field name="sequence">30</field>
+        <field name="number">03</field>
+        <field name="name">Sales &amp; Target Performance Dashboard</field>
+        <field name="overview">An interactive Power BI dashboard designed to analyze sales performance against business targets. The dashboard provides a clear view of overall sales, targets, and performance gaps while enabling analysis across different periods, customer segments, and product categories.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Compared actual sales performance against established targets.</li>
+<li>Measured the gap between actual sales and target values.</li>
+<li>Analyzed monthly sales trends.</li>
+<li>Compared Technology, Furniture, and Office Supplies categories.</li>
+<li>Evaluated Consumer, Corporate, and Home Office customer segments.</li>
+<li>Used achievement percentages to evaluate performance against targets.</li>
+<li>Added interactive filtering by year, segment, and category.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">Total Sales</span><span class="o_portfolio_highlight_value">~SAR 2M</span></li>
+<li><span class="o_portfolio_highlight_label">Total Target</span><span class="o_portfolio_highlight_value">~SAR 2M</span></li>
+<li><span class="o_portfolio_highlight_label">Target Gap</span><span class="o_portfolio_highlight_value">SAR 57K</span></li>
+<li><span class="o_portfolio_highlight_label">Technology Sales</span><span class="o_portfolio_highlight_value">SAR 836K</span></li>
+<li><span class="o_portfolio_highlight_label">Furniture Sales</span><span class="o_portfolio_highlight_value">SAR 742K</span></li>
+<li><span class="o_portfolio_highlight_label">Office Supplies Sales</span><span class="o_portfolio_highlight_value">SAR 719K</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel, Power BI, Business Intelligence, Business Performance Analysis, KPI &amp; Target Analysis</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNDcxZGUwZDgtOWI0Yy00YjE2LTgwNjgtZmNiMTZlNGI0MmY1IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-dataanalysis-aesaevaesaeyaesabraeqaeyaepaeuaepaes-activity-7488588388627968000-7nJ_?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-03-cover.svg</field>
+    </record>
+
+    <record id="project_04_budget" model="portfolio.project">
+        <field name="sequence">40</field>
+        <field name="number">04</field>
+        <field name="name">Saudi Arabia Budget &amp; Financial Analysis</field>
+        <field name="overview">An interactive Power BI dashboard developed to analyze Saudi Arabia's budget performance, including historical actuals, budget estimates, and future projections. The dashboard provides a consolidated view of government revenues, expenditures, public debt, budget deficit, and sector-level spending.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Compared government revenues and expenditures across actual, budgeted, and projected periods.</li>
+<li>Analyzed the relationship between revenue and expenditure.</li>
+<li>Tracked public debt and budget deficit.</li>
+<li>Analyzed government expenditure allocation across major sectors.</li>
+<li>Evaluated budget deficit as a percentage of revenue.</li>
+<li>Analyzed expenditure distribution across major classifications.</li>
+<li>Used DAX measures and KPIs for financial performance analysis.</li>
+<li>Combined historical, budgeted, and projected data into a unified analytical dashboard.</li>
+</ul></field>
+        <field name="highlights" type="html"><p class="o_portfolio_highlight_note">FY 2026 Budget</p>
+<ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">Total Revenue</span><span class="o_portfolio_highlight_value">SAR 1,147 billion</span></li>
+<li><span class="o_portfolio_highlight_label">Total Expenditure</span><span class="o_portfolio_highlight_value">SAR 1,313 billion</span></li>
+<li><span class="o_portfolio_highlight_label">Public Debt</span><span class="o_portfolio_highlight_value">SAR 1,622 billion</span></li>
+<li><span class="o_portfolio_highlight_label">Budget Deficit</span><span class="o_portfolio_highlight_value">SAR 165 billion</span></li>
+<li><span class="o_portfolio_highlight_label">Budget Deficit as % of Revenue</span><span class="o_portfolio_highlight_value">14.4%</span></li>
+<li><span class="o_portfolio_highlight_label">Largest Sector Allocation</span><span class="o_portfolio_highlight_value">Health &amp; Social Development (19.7%)</span></li>
+</ul>
+<p class="o_portfolio_highlight_note">Analysis covers 2024 actual results through 2028 projections.</p></field>
+        <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, Budget &amp; KPI Analysis, Business &amp; Financial Analysis</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiY2ZhNjMyMjYtNmFjYi00MDE3LWJkM2QtNmU0YTA0NDg4ZDhhIiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7492184806668115968-cPAD?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-04-cover.svg</field>
+        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-04-alt.svg</field>
+    </record>
+
+    <record id="project_05_risk" model="portfolio.project">
+        <field name="sequence">50</field>
+        <field name="number">05</field>
+        <field name="name">Operational Risk Monitoring Dashboard</field>
+        <field name="overview">An interactive Power BI dashboard developed to monitor and analyze operational risks across different departments and time periods. The dashboard provides a centralized view of risk status, categories, severity, and key risk indicators to support structured risk monitoring and prioritization.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Monitored operational risks across 2025 and 2026.</li>
+<li>Tracked total, open, and critical risks.</li>
+<li>Classified risks by status, including closed, open, and under treatment.</li>
+<li>Analyzed risk distribution across different categories.</li>
+<li>Used a Risk Matrix to assess likelihood and impact.</li>
+<li>Identified critical risks and compared them with the defined target.</li>
+<li>Provided detailed risk-level information including risk ID, category, source, department, status, score, and reporting period.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">Total Risks</span><span class="o_portfolio_highlight_value">60</span></li>
+<li><span class="o_portfolio_highlight_label">Open Risks</span><span class="o_portfolio_highlight_value">18</span></li>
+<li><span class="o_portfolio_highlight_label">Critical Risks</span><span class="o_portfolio_highlight_value">12</span></li>
+<li><span class="o_portfolio_highlight_label">Critical Risk Target</span><span class="o_portfolio_highlight_value">10</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel, Power BI, DAX, Risk Analysis, Risk Indicators (KPIs), Risk Matrix</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNjcxNWJhYjEtZmI5Mi00ODAxLWFmNzYtZmIyODM1Zjg2NTk0IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7494614497567870976-O4o8?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-05-cover.svg</field>
+        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-05-alt.svg</field>
+    </record>
+
+    <record id="project_06_growth" model="portfolio.project">
+        <field name="sequence">60</field>
+        <field name="number">06</field>
+        <field name="name">Behind the Growth</field>
+        <field name="subtitle">A Deep Dive into Saudi Consumer Credit Trends</field>
+        <field name="overview">A financial and consumer behavior analysis dashboard developed in Power BI to explore Saudi consumer credit and spending trends over time. The project examines consumer lending growth, credit card activity, loan quality, banking profitability, liquidity indicators, and shifts in consumer spending patterns.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>Compared quarterly growth in consumer loans and credit card loans.</li>
+<li>Analyzed Non-Performing Loan (NPL) ratio trends.</li>
+<li>Tracked Return on Assets (ROA) and Return on Equity (ROE).</li>
+<li>Examined lending-to-deposit indicators.</li>
+<li>Compared consumer spending and financing across categories such as home renovation, furniture, vehicles, and credit cards.</li>
+<li>Used quarterly trend analysis to identify changes in consumer borrowing and spending behavior.</li>
+<li>Built financial KPIs to summarize credit growth, loan quality, and banking performance.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">Latest Consumer Loans</span><span class="o_portfolio_highlight_value">477K</span></li>
+<li><span class="o_portfolio_highlight_label">Latest Quarterly Growth</span><span class="o_portfolio_highlight_value">1.44%</span></li>
+<li><span class="o_portfolio_highlight_label">Strongest Quarterly Rise</span><span class="o_portfolio_highlight_value">2.20%</span></li>
+<li><span class="o_portfolio_highlight_label">Strongest Quarterly Drop</span><span class="o_portfolio_highlight_value">-2.09%</span></li>
+<li><span class="o_portfolio_highlight_label">Latest Private Claims-to-Deposits Ratio</span><span class="o_portfolio_highlight_value">106.81%</span></li>
+<li><span class="o_portfolio_highlight_label">NPL Ratio</span><span class="o_portfolio_highlight_value">Declined from 1.60% to 1.10%</span></li>
+<li><span class="o_portfolio_highlight_label">Latest LTD Ratio</span><span class="o_portfolio_highlight_value">80.45%</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, Consumer Behavior Analysis, Consumer Spending Analysis, Financial KPI Analysis, Trend Analysis</field>
+        <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNjM3NWQxMmEtNzAzMy00ZmZiLTllNWMtMGU4NGUwNGI1YjY5IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
+        <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_dataanalysis-powerbi-excel-activity-7497217574963748864-kopT?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
+        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-06-cover.svg</field>
+        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-06-alt2.svg</field>
+        <field name="image_3_placeholder">/somaya_portfolio/static/src/img/project-06-alt3.svg</field>
+    </record>
+
+</odoo>

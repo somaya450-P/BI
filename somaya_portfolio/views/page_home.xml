@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="page_home" inherit_id="website.homepage" name="Somaya Alasmi — Home" priority="90">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+            <t t-set="hero_project" t-value="request.env.ref('somaya_portfolio.project_01_donation', raise_if_not_found=False) or request.env['portfolio.project'].sudo().search([], order='sequence, id', limit=1)"/>
+            <t t-set="selected_work" t-value="request.env['portfolio.project'].sudo().search([], order='sequence, id', limit=3)"/>
+
+            <div id="wrap" class="o_somaya_home">
+
+                <!-- HERO -->
+                <section class="o_somaya_hero">
+                    <div class="container">
+                        <div class="row align-items-center o_somaya_hero_row">
+                            <div class="col-lg-6 o_somaya_hero_text">
+                                <div class="o_somaya_identity">
+                                    <span class="o_somaya_identity_name">
+                                        <t t-if="lang_code == 'ar_001'">سمية العاصمي</t>
+                                        <t t-else="">SOMAYA ALASMI</t>
+                                    </span>
+                                    <span class="o_somaya_identity_sep">/</span>
+                                    <span class="o_somaya_identity_tag">
+                                        <t t-if="lang_code == 'ar_001'">معرض الأعمال</t>
+                                        <t t-else="">PORTFOLIO</t>
+                                    </span>
+                                </div>
+
+                                <h1 class="o_somaya_headline">
+                                    <t t-if="lang_code == 'ar_001'">
+                                        محللة بيانات و<br/>
+                                        <span class="o_somaya_accent">ذكاء الأعمال.</span>
+                                    </t>
+                                    <t t-else="">
+                                        Data Analyst &amp;<br/>
+                                        <span class="o_somaya_accent">Business Intelligence.</span>
+                                    </t>
+                                </h1>
+
+                                <p class="o_somaya_value_prop">
+                                    <t t-if="lang_code == 'ar_001'">
+                                        تحويل البيانات المعقدة إلى رؤى واضحة، ومؤشرات أداء ذات معنى، ولوحات تحكم تفاعلية تدعم اتخاذ قرارات أعمال أفضل.
+                                    </t>
+                                    <t t-else="">
+                                        Turning complex data into clear insights, meaningful KPIs, and interactive dashboards that support better business decisions.
+                                    </t>
+                                </p>
+
+                                <p class="o_somaya_description">
+                                    <t t-if="lang_code == 'ar_001'">
+                                        أعمل على تحويل البيانات الخام إلى تحليلات منظمة وحلول ذكاء أعمال تفاعلية — بدءًا من تجهيز البيانات ونمذجتها، مرورًا بكتابة مقاييس DAX وتحليل مؤشرات الأداء، وصولًا إلى تصميم لوحات تحكم تدعم اتخاذ القرار.
+                                    </t>
+                                    <t t-else="">
+                                        I transform raw data into structured analysis and interactive business intelligence solutions — from data preparation and modeling to DAX measures, KPI analysis, and decision-focused dashboards.
+                                    </t>
+                                </p>
+
+                                <div class="o_somaya_cta_row">
+                                    <a href="/projects" class="btn o_somaya_btn_primary">
+                                        <t t-if="lang_code == 'ar_001'">عرض المشاريع</t>
+                                        <t t-else="">View Projects</t>
+                                    </a>
+                                    <a href="/about" class="btn o_somaya_btn_secondary">
+                                        <t t-if="lang_code == 'ar_001'">نبذة عني</t>
+                                        <t t-else="">About Me</t>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 o_somaya_hero_visual">
+                                <div class="o_somaya_dashboard_frame">
+                                    <div class="o_somaya_dashboard_frame_bar">
+                                        <span/><span/><span/>
+                                    </div>
+                                    <img t-if="hero_project.cover_image" class="o_somaya_dashboard_frame_img"
+                                         t-attf-src="/web/image/portfolio.project/#{hero_project.id}/cover_image"
+                                         t-att-alt="hero_project.name" loading="lazy"/>
+                                    <img t-else="" class="o_somaya_dashboard_frame_img"
+                                         t-att-src="hero_project.cover_placeholder"
+                                         t-att-alt="hero_project.name" loading="lazy"/>
+                                </div>
+                                <div class="o_somaya_hero_caption">
+                                    <t t-if="lang_code == 'ar_001'">لوحة أداء التبرعات — مشروع تحليلي حقيقي</t>
+                                    <t t-else="">Donation Performance Dashboard — a real analytical project</t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EXPERTISE STRIP -->
+                <section class="o_somaya_expertise">
+                    <div class="container">
+                        <ul class="o_somaya_expertise_list list-unstyled">
+                            <li>Power BI</li>
+                            <li>Excel</li>
+                            <li>DAX</li>
+                            <li>Power Query</li>
+                            <li><t t-if="lang_code == 'ar_001'">نمذجة البيانات</t><t t-else="">Data Modeling</t></li>
+                            <li><t t-if="lang_code == 'ar_001'">ذكاء الأعمال</t><t t-else="">Business Intelligence</t></li>
+                            <li><t t-if="lang_code == 'ar_001'">تحليل مؤشرات الأداء</t><t t-else="">KPI Analysis</t></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SELECTED WORK -->
+                <section class="o_somaya_selected_work">
+                    <div class="container">
+                        <div class="o_somaya_section_head">
+                            <h2>
+                                <t t-if="lang_code == 'ar_001'">مختارات من الأعمال</t>
+                                <t t-else="">Selected Work</t>
+                            </h2>
+                        </div>
+                        <div class="row o_somaya_work_row">
+                            <t t-foreach="selected_work" t-as="proj">
+                                <div class="col-md-4 mb-4">
+                                    <a t-attf-href="/projects/#{slug(proj)}" class="o_somaya_work_card">
+                                        <div class="o_somaya_work_card_img">
+                                            <img t-if="proj.cover_image"
+                                                 t-attf-src="/web/image/portfolio.project/#{proj.id}/cover_image"
+                                                 t-att-alt="proj.name" loading="lazy"/>
+                                            <img t-else="" t-att-src="proj.cover_placeholder"
+                                                 t-att-alt="proj.name" loading="lazy"/>
+                                        </div>
+                                        <div class="o_somaya_work_card_body">
+                                            <span class="o_somaya_work_card_number" t-esc="proj.number"/>
+                                            <span class="o_somaya_work_card_title" t-field="proj.name"/>
+                                        </div>
+                                    </a>
+                                </div>
+                            </t>
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="/projects" class="btn o_somaya_btn_outline">
+                                <t t-if="lang_code == 'ar_001'">استعراض جميع المشاريع</t>
+                                <t t-else="">Explore All Projects</t>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

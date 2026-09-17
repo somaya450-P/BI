@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="page_projects_list" name="Selected Projects">
+        <t t-call="website.layout">
+            <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+            <div id="wrap" class="o_somaya_projects_list">
+
+                <section class="o_somaya_page_header">
+                    <div class="container">
+                        <h1>
+                            <t t-if="lang_code == 'ar_001'">مشاريع مختارة</t>
+                            <t t-else="">Selected Projects</t>
+                        </h1>
+                        <p class="o_somaya_page_header_sub">
+                            <t t-if="lang_code == 'ar_001'">
+                                مجموعة من مشاريع تحليل البيانات وذكاء الأعمال، تركّز على تحويل البيانات إلى رؤى واضحة، ومؤشرات أداء قابلة للقياس، ولوحات تحكم تدعم اتخاذ القرار.
+                            </t>
+                            <t t-else="">
+                                A collection of data analysis and business intelligence projects focused on transforming data into clear insights, measurable performance indicators, and decision-support dashboards.
+                            </t>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="o_somaya_projects_grid">
+                    <div class="container">
+                        <t t-foreach="projects" t-as="proj">
+                            <div class="o_somaya_project_card_big">
+                                <div class="row align-items-center g-0">
+                                    <div t-attf-class="col-lg-7 o_somaya_project_card_img_col #{'order-lg-2' if proj_index % 2 else ''}">
+                                        <a t-attf-href="/projects/#{slug(proj)}" class="o_somaya_project_card_img_link">
+                                            <img t-if="proj.cover_image"
+                                                 t-attf-src="/web/image/portfolio.project/#{proj.id}/cover_image"
+                                                 t-att-alt="proj.name" loading="lazy"/>
+                                            <img t-else="" t-att-src="proj.cover_placeholder"
+                                                 t-att-alt="proj.name" loading="lazy"/>
+                                        </a>
+                                    </div>
+                                    <div t-attf-class="col-lg-5 o_somaya_project_card_body #{'order-lg-1' if proj_index % 2 else ''}">
+                                        <span class="o_somaya_project_card_number" t-esc="proj.number"/>
+                                        <h2 class="o_somaya_project_card_title" t-field="proj.name"/>
+                                        <p class="o_somaya_project_card_desc" t-field="proj.overview"/>
+                                        <div class="o_somaya_project_card_tags">
+                                            <t t-foreach="proj.tool_list()[:5]" t-as="tool">
+                                                <span class="o_somaya_tag" t-esc="tool"/>
+                                            </t>
+                                        </div>
+                                        <a t-attf-href="/projects/#{slug(proj)}" class="btn o_somaya_btn_outline mt-2">
+                                            <t t-if="lang_code == 'ar_001'">استعراض دراسة الحالة</t>
+                                            <t t-else="">Explore Case Study</t>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <template id="page_project_detail" name="Project Case Study">
+        <t t-call="website.layout">
+            <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+            <div id="wrap" class="o_somaya_project_detail">
+
+                <section class="o_somaya_project_detail_header">
+                    <div class="container">
+                        <a href="/projects" class="o_somaya_back_link">
+                            <t t-if="lang_code == 'ar_001'">← جميع المشاريع</t>
+                            <t t-else="">← All Projects</t>
+                        </a>
+                        <span class="o_somaya_project_card_number" t-esc="project.number"/>
+                        <h1 t-field="project.name"/>
+                        <p t-if="project.subtitle" class="o_somaya_project_detail_subtitle" t-field="project.subtitle"/>
+                    </div>
+                </section>
+
+                <section class="o_somaya_project_detail_cover">
+                    <div class="container">
+                        <div class="o_somaya_dashboard_frame o_somaya_dashboard_frame_lg">
+                            <div class="o_somaya_dashboard_frame_bar"><span/><span/><span/></div>
+                            <a t-if="project.cover_image"
+                               t-attf-href="/web/image/portfolio.project/#{project.id}/cover_image"
+                               target="_blank" rel="noreferrer noopener">
+                                <img class="o_somaya_dashboard_frame_img"
+                                     t-attf-src="/web/image/portfolio.project/#{project.id}/cover_image"
+                                     t-att-alt="project.name" loading="lazy"/>
+                            </a>
+                            <img t-else="" class="o_somaya_dashboard_frame_img"
+                                 t-att-src="project.cover_placeholder" t-att-alt="project.name" loading="lazy"/>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="o_somaya_project_detail_body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+
+                                <div class="o_somaya_detail_block">
+                                    <h2 class="o_somaya_section_title">
+                                        <t t-if="lang_code == 'ar_001'">نبذة عن المشروع</t>
+                                        <t t-else="">Project Overview</t>
+                                    </h2>
+                                    <p t-field="project.overview"/>
+                                </div>
+
+                                <div class="o_somaya_detail_block" t-if="project.key_analysis">
+                                    <h2 class="o_somaya_section_title">
+                                        <t t-if="lang_code == 'ar_001'">أبرز التحليلات</t>
+                                        <t t-else="">Key Analysis</t>
+                                    </h2>
+                                    <div t-field="project.key_analysis" class="o_somaya_key_analysis"/>
+                                </div>
+
+                                <div class="o_somaya_detail_block" t-if="project.image_2 or project.image_2_placeholder or project.image_3 or project.image_3_placeholder">
+                                    <h2 class="o_somaya_section_title">
+                                        <t t-if="lang_code == 'ar_001'">لقطات إضافية</t>
+                                        <t t-else="">Additional Screenshots</t>
+                                    </h2>
+                                    <div class="o_somaya_gallery">
+                                        <t t-if="project.image_2 or project.image_2_placeholder">
+                                            <a t-if="project.image_2"
+                                               t-attf-href="/web/image/portfolio.project/#{project.id}/image_2"
+                                               target="_blank" rel="noreferrer noopener" class="o_somaya_gallery_item">
+                                                <img t-attf-src="/web/image/portfolio.project/#{project.id}/image_2"
+                                                     t-att-alt="project.name" loading="lazy"/>
+                                            </a>
+                                            <a t-else="" t-att-href="project.image_2_placeholder"
+                                               target="_blank" rel="noreferrer noopener" class="o_somaya_gallery_item">
+                                                <img t-att-src="project.image_2_placeholder" t-att-alt="project.name" loading="lazy"/>
+                                            </a>
+                                        </t>
+                                        <t t-if="project.image_3 or project.image_3_placeholder">
+                                            <a t-if="project.image_3"
+                                               t-attf-href="/web/image/portfolio.project/#{project.id}/image_3"
+                                               target="_blank" rel="noreferrer noopener" class="o_somaya_gallery_item">
+                                                <img t-attf-src="/web/image/portfolio.project/#{project.id}/image_3"
+                                                     t-att-alt="project.name" loading="lazy"/>
+                                            </a>
+                                            <a t-else="" t-att-href="project.image_3_placeholder"
+                                               target="_blank" rel="noreferrer noopener" class="o_somaya_gallery_item">
+                                                <img t-att-src="project.image_3_placeholder" t-att-alt="project.name" loading="lazy"/>
+                                            </a>
+                                        </t>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-5">
+                                <div class="o_somaya_sidebar">
+
+                                    <div class="o_somaya_detail_block" t-if="project.highlights">
+                                        <h2 class="o_somaya_section_title">
+                                            <t t-if="lang_code == 'ar_001'">أبرز مؤشرات لوحة التحكم</t>
+                                            <t t-else="">Dashboard Highlights</t>
+                                        </h2>
+                                        <div t-field="project.highlights"/>
+                                    </div>
+
+                                    <div class="o_somaya_detail_block">
+                                        <h2 class="o_somaya_section_title">
+                                            <t t-if="lang_code == 'ar_001'">الأدوات والتقنيات</t>
+                                            <t t-else="">Tools &amp; Techniques</t>
+                                        </h2>
+                                        <div class="o_somaya_project_card_tags">
+                                            <t t-foreach="project.tool_list()" t-as="tool">
+                                                <span class="o_somaya_tag" t-esc="tool"/>
+                                            </t>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_somaya_detail_actions">
+                                        <a t-if="project.dashboard_url" t-att-href="project.dashboard_url"
+                                           target="_blank" rel="noreferrer noopener"
+                                           class="btn o_somaya_btn_primary o_somaya_btn_block">
+                                            <i class="fa fa-bar-chart me-2" role="img" aria-label="Dashboard"/>
+                                            <t t-if="lang_code == 'ar_001'">عرض لوحة التحكم التفاعلية</t>
+                                            <t t-else="">View Interactive Dashboard</t>
+                                        </a>
+                                        <a t-if="project.linkedin_url" t-att-href="project.linkedin_url"
+                                           target="_blank" rel="noreferrer noopener"
+                                           class="btn o_somaya_btn_outline o_somaya_btn_block mt-2">
+                                            <i class="fa fa-linkedin me-2" role="img" aria-label="LinkedIn"/>
+                                            <t t-if="lang_code == 'ar_001'">عرض المنشور على LinkedIn</t>
+                                            <t t-else="">View LinkedIn Post</t>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="o_somaya_project_next" t-if="next_project">
+                    <div class="container">
+                        <a t-attf-href="/projects/#{slug(next_project)}" class="o_somaya_project_next_link">
+                            <span class="o_somaya_project_next_label">
+                                <t t-if="lang_code == 'ar_001'">المشروع التالي</t>
+                                <t t-else="">Next Project</t>
+                            </span>
+                            <span class="o_somaya_project_next_title" t-field="next_project.name"/>
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

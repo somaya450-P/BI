@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="portfolio_project_view_list" model="ir.ui.view">
+        <field name="name">portfolio.project.list</field>
+        <field name="model">portfolio.project</field>
+        <field name="arch" type="xml">
+            <list string="Portfolio Projects">
+                <field name="sequence" widget="handle"/>
+                <field name="number"/>
+                <field name="name"/>
+                <field name="active" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="portfolio_project_view_form" model="ir.ui.view">
+        <field name="name">portfolio.project.form</field>
+        <field name="model">portfolio.project</field>
+        <field name="arch" type="xml">
+            <form string="Portfolio Project">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="number"/>
+                            <field name="name"/>
+                            <field name="subtitle"/>
+                            <field name="sequence"/>
+                        </group>
+                        <group>
+                            <field name="dashboard_url"/>
+                            <field name="linkedin_url"/>
+                            <field name="tools"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Content">
+                            <field name="overview"/>
+                            <label for="key_analysis"/>
+                            <field name="key_analysis"/>
+                            <label for="highlights"/>
+                            <field name="highlights"/>
+                        </page>
+                        <page string="Images">
+                            <group>
+                                <field name="cover_image" widget="image" class="oe_avatar"/>
+                                <field name="cover_placeholder" string="Cover fallback (static path)"/>
+                            </group>
+                            <group>
+                                <field name="image_2" widget="image" class="oe_avatar"/>
+                                <field name="image_2_placeholder" string="Image 2 fallback (static path)"/>
+                            </group>
+                            <group>
+                                <field name="image_3" widget="image" class="oe_avatar"/>
+                                <field name="image_3_placeholder" string="Image 3 fallback (static path)"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="portfolio_project_action" model="ir.actions.act_window">
+        <field name="name">Portfolio Projects</field>
+        <field name="res_model">portfolio.project</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_portfolio_root"
+              name="Portfolio"
+              web_icon="somaya_portfolio,static/description/icon.png"
+              sequence="90"/>
+    <menuitem id="menu_portfolio_projects"
+              name="Projects"
+              parent="menu_portfolio_root"
+              action="portfolio_project_action"
+              sequence="10"/>
+
+</odoo>

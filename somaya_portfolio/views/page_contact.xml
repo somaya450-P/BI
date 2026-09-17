@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="page_contact" model="website.page">
+        <field name="name">Contact</field>
+        <field name="type">qweb</field>
+        <field name="key">somaya_portfolio.page_contact</field>
+        <field name="url">/contact</field>
+        <field name="is_published">True</field>
+        <field name="website_indexed">True</field>
+        <field name="arch" type="xml">
+            <t t-call="website.layout">
+                <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+                <div id="wrap" class="o_somaya_contact">
+                    <section class="o_somaya_page_header">
+                        <div class="container">
+                            <h1>
+                                <t t-if="lang_code == 'ar_001'">لنتواصل</t>
+                                <t t-else="">Let's Connect</t>
+                            </h1>
+                            <p class="o_somaya_page_header_sub">
+                                <t t-if="lang_code == 'ar_001'">
+                                    مهتم بأعمالي أو ترغب في مناقشة البيانات أو التحليل أو ذكاء الأعمال؟ لا تتردد في التواصل معي.
+                                </t>
+                                <t t-else="">
+                                    Interested in my work or want to discuss data, analytics, or business intelligence? Feel free to get in touch.
+                                </t>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="o_somaya_contact_methods">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <a href="mailto:somaya.ali121@gmail.com" class="o_somaya_contact_card">
+                                        <i class="fa fa-envelope-o o_somaya_contact_icon" role="img" aria-label="Email"/>
+                                        <span class="o_somaya_contact_label">
+                                            <t t-if="lang_code == 'ar_001'">البريد الإلكتروني</t>
+                                            <t t-else="">Email</t>
+                                        </span>
+                                        <span class="o_somaya_contact_value" dir="ltr">somaya.ali121@gmail.com</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <a href="tel:+966551759979" class="o_somaya_contact_card">
+                                        <i class="fa fa-phone o_somaya_contact_icon" role="img" aria-label="Phone"/>
+                                        <span class="o_somaya_contact_label">
+                                            <t t-if="lang_code == 'ar_001'">رقم الهاتف</t>
+                                            <t t-else="">Phone</t>
+                                        </span>
+                                        <span class="o_somaya_contact_value" dir="ltr">+966 55 175 9979</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <a href="https://www.linkedin.com/in/somaya-ali-alasmi7" target="_blank"
+                                       rel="noreferrer noopener" class="o_somaya_contact_card">
+                                        <i class="fa fa-linkedin o_somaya_contact_icon" role="img" aria-label="LinkedIn"/>
+                                        <span class="o_somaya_contact_label">LinkedIn</span>
+                                        <span class="o_somaya_contact_value" dir="ltr">/somaya-ali-alasmi7</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <a href="https://www.linkedin.com/in/somaya-ali-alasmi7" target="_blank"
+                                   rel="noreferrer noopener" class="btn o_somaya_btn_primary o_somaya_btn_lg">
+                                    <i class="fa fa-linkedin me-2" role="img" aria-label="LinkedIn"/>
+                                    <t t-if="lang_code == 'ar_001'">التواصل عبر LinkedIn</t>
+                                    <t t-else="">Connect on LinkedIn</t>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </field>
+    </record>
+
+</odoo>

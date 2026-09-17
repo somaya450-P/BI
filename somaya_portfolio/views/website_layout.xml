@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="footer_custom" inherit_id="website.layout" name="Somaya Portfolio Footer">
+        <xpath expr="//footer" position="replace">
+            <footer id="bottom" class="o_footer_somaya">
+                <t t-set="lang_code" t-value="request.env.context.get('lang', 'en_US')"/>
+                <div class="container py-5">
+                    <div class="row o_footer_somaya_row">
+                        <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+                            <div class="o_footer_somaya_name">
+                                <t t-if="lang_code == 'ar_001'">سمية العاصمي</t>
+                                <t t-else="">Somaya Alasmi</t>
+                            </div>
+                            <div class="o_footer_somaya_role">
+                                <t t-if="lang_code == 'ar_001'">محللة بيانات وذكاء أعمال</t>
+                                <t t-else="">Data Analyst &amp; Business Intelligence</t>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4 mb-4 mb-lg-0">
+                            <ul class="o_footer_somaya_nav list-unstyled mb-0">
+                                <li><a href="/">
+                                    <t t-if="lang_code == 'ar_001'">الرئيسية</t>
+                                    <t t-else="">Home</t>
+                                </a></li>
+                                <li><a href="/projects">
+                                    <t t-if="lang_code == 'ar_001'">المشاريع</t>
+                                    <t t-else="">Projects</t>
+                                </a></li>
+                                <li><a href="/about">
+                                    <t t-if="lang_code == 'ar_001'">نبذة عني</t>
+                                    <t t-else="">About Me</t>
+                                </a></li>
+                                <li><a href="/contact">
+                                    <t t-if="lang_code == 'ar_001'">التواصل</t>
+                                    <t t-else="">Contact</t>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3 text-lg-end">
+                            <a href="https://www.linkedin.com/in/somaya-ali-alasmi7" target="_blank"
+                               rel="noreferrer noopener" aria-label="LinkedIn" class="o_footer_somaya_social">
+                                <i class="fa fa-linkedin" role="img" aria-label="LinkedIn"/>
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="o_footer_somaya_divider"/>
+                    <div class="o_footer_somaya_copy">
+                        <t t-if="lang_code == 'ar_001'">
+                            © <t t-esc="datetime.datetime.now().year"/> سمية العاصمي. جميع الحقوق محفوظة.
+                        </t>
+                        <t t-else="">
+                            © <t t-esc="datetime.datetime.now().year"/> Somaya Alasmi. All rights reserved.
+                        </t>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+
+</odoo>

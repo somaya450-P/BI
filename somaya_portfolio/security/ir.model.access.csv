@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_portfolio_project_public,portfolio.project.public,model_portfolio_project,,1,0,0,0
+access_portfolio_project_website,portfolio.project.website,model_portfolio_project,website.group_website_designer,1,1,1,1
+access_portfolio_project_system,portfolio.project.system,model_portfolio_project,base.group_system,1,1,1,1
