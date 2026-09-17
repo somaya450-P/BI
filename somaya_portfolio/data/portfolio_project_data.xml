@@ -23,7 +23,7 @@
         <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, KPI Analysis</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNDQzYTM5ZWEtNzUzMy00NmQwLWI2ZTYtOGUwNGE5OTZiY2U0IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7483125392791429120-9nY5?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-01-cover.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-01-donation-cover.png"/>
     </record>
 
     <record id="project_02_madinah" model="portfolio.project">
@@ -42,8 +42,8 @@
         <field name="tools">Microsoft Excel, Power BI, KPI Analysis, Data Collection, Data Transformation</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiYzIxZTM4ZjUtOTAzYi00NDNiLThlYTItZGZjMTYwODlmNzc4IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7485971056294297601-iUHC?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-02-cover.svg</field>
-        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-02-alt.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-02-madinah-cover.png"/>
+        <field name="image_2" type="base64" file="somaya_portfolio/static/src/img/project-02-madinah-alt.png"/>
     </record>
 
     <record id="project_03_sales" model="portfolio.project">
@@ -71,7 +71,7 @@
         <field name="tools">Microsoft Excel, Power BI, Business Intelligence, Business Performance Analysis, KPI &amp; Target Analysis</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNDcxZGUwZDgtOWI0Yy00YjE2LTgwNjgtZmNiMTZlNGI0MmY1IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-dataanalysis-aesaevaesaeyaesabraeqaeyaepaeuaepaes-activity-7488588388627968000-7nJ_?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-03-cover.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-03-sales-cover.png"/>
     </record>
 
     <record id="project_04_budget" model="portfolio.project">
@@ -102,8 +102,8 @@
         <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, Budget &amp; KPI Analysis, Business &amp; Financial Analysis</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiY2ZhNjMyMjYtNmFjYi00MDE3LWJkM2QtNmU0YTA0NDg4ZDhhIiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7492184806668115968-cPAD?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-04-cover.svg</field>
-        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-04-alt.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-04-budget-cover.png"/>
+        <field name="image_2" type="base64" file="somaya_portfolio/static/src/img/project-04-budget-alt.png"/>
     </record>
 
     <record id="project_05_risk" model="portfolio.project">
@@ -129,8 +129,8 @@
         <field name="tools">Microsoft Excel, Power BI, DAX, Risk Analysis, Risk Indicators (KPIs), Risk Matrix</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNjcxNWJhYjEtZmI5Mi00ODAxLWFmNzYtZmIyODM1Zjg2NTk0IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_powerbi-aesaevaesaeyaesabraepaesaeqaeyaepaeuaepaes-activity-7494614497567870976-O4o8?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-05-cover.svg</field>
-        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-05-alt.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-05-risk-cover.png"/>
+        <field name="image_2" type="base64" file="somaya_portfolio/static/src/img/project-05-risk-alt.png"/>
     </record>
 
     <record id="project_06_growth" model="portfolio.project">
@@ -160,9 +160,9 @@
         <field name="tools">Microsoft Excel, Power BI, Power Query, DAX, Consumer Behavior Analysis, Consumer Spending Analysis, Financial KPI Analysis, Trend Analysis</field>
         <field name="dashboard_url">https://app.powerbi.com/view?r=eyJrIjoiNjM3NWQxMmEtNzAzMy00ZmZiLTllNWMtMGU4NGUwNGI1YjY5IiwidCI6IjNlMDNiMmEzLWNkM2EtNDZmNy1iMDUxLTc2YjQzMzQ0Zjk5MyIsImMiOjl9</field>
         <field name="linkedin_url">https://www.linkedin.com/posts/somaya-ali-alasmi7_dataanalysis-powerbi-excel-activity-7497217574963748864-kopT?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGBtpU0Bf1z6JsfHs6DJDpKWEfJSI5kupU4</field>
-        <field name="cover_placeholder">/somaya_portfolio/static/src/img/project-06-cover.svg</field>
-        <field name="image_2_placeholder">/somaya_portfolio/static/src/img/project-06-alt2.svg</field>
-        <field name="image_3_placeholder">/somaya_portfolio/static/src/img/project-06-alt3.svg</field>
+        <field name="cover_image" type="base64" file="somaya_portfolio/static/src/img/project-06-growth-cover.png"/>
+        <field name="image_2" type="base64" file="somaya_portfolio/static/src/img/project-06-growth-alt2.png"/>
+        <field name="image_3" type="base64" file="somaya_portfolio/static/src/img/project-06-growth-alt3.png"/>
     </record>
 
 </odoo>
