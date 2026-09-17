@@ -1,0 +1,484 @@
+// Somaya Alasmi Portfolio — premium BI-inspired styling
+// Scope: only the o_somaya_* wrapper classes used by this module's templates,
+// so normal Website Builder edits elsewhere on the site stay unaffected.
+
+.o_somaya_home, .o_somaya_about, .o_somaya_contact, .o_somaya_projects_list, .o_somaya_project_detail {
+    background: $somaya-paper;
+    color: $somaya-charcoal;
+    font-family: $somaya-font-body;
+    line-height: 1.65;
+
+    [dir="rtl"] & { font-family: $somaya-font-arabic; }
+
+    h1, h2, h3 {
+        font-family: $somaya-font-heading;
+        color: $somaya-navy;
+        letter-spacing: -0.01em;
+    }
+
+    [dir="rtl"] &, &[dir="rtl"] {
+        h1, h2, h3 { font-family: $somaya-font-arabic; letter-spacing: 0; }
+    }
+
+    section { padding: 4.5rem 0; }
+    @media (max-width: 991px) { section { padding: 3rem 0; } }
+}
+
+// ---------------------------------------------------------------------
+// Buttons
+// ---------------------------------------------------------------------
+.o_somaya_btn_primary,
+.o_somaya_btn_secondary,
+.o_somaya_btn_outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.75rem;
+    border-radius: $somaya-radius;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform $somaya-transition, box-shadow $somaya-transition, background-color $somaya-transition, color $somaya-transition;
+    border: 1.5px solid transparent;
+}
+.o_somaya_btn_primary {
+    background: $somaya-navy;
+    color: $somaya-offwhite;
+    &:hover { background: $somaya-navy-deep; transform: translateY(-2px); box-shadow: 0 10px 24px -12px rgba(11,31,58,0.45); color: $somaya-offwhite; }
+}
+.o_somaya_btn_secondary {
+    background: transparent;
+    color: $somaya-navy;
+    border-color: $somaya-border;
+    &:hover { border-color: $somaya-navy; transform: translateY(-2px); color: $somaya-navy; }
+}
+.o_somaya_btn_outline {
+    background: transparent;
+    color: $somaya-navy;
+    border-color: $somaya-navy;
+    &:hover { background: $somaya-navy; color: $somaya-offwhite; transform: translateY(-2px); }
+}
+.o_somaya_btn_lg { padding: 1rem 2.25rem; font-size: 1.02rem; }
+.o_somaya_btn_block { display: flex; width: 100%; }
+
+.o_somaya_cta_row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+
+@media (prefers-reduced-motion: reduce) {
+    .o_somaya_btn_primary, .o_somaya_btn_secondary, .o_somaya_btn_outline { transition: none; }
+}
+
+// ---------------------------------------------------------------------
+// Hero
+// ---------------------------------------------------------------------
+.o_somaya_hero { padding-top: 5.5rem; padding-bottom: 4rem; }
+
+.o_somaya_identity {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+}
+.o_somaya_identity_name {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $somaya-navy;
+}
+.o_somaya_identity_sep { color: $somaya-text-muted; font-size: 16px; opacity: 0.6; }
+.o_somaya_identity_tag {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $somaya-blue-muted;
+}
+@media (max-width: 767px) {
+    .o_somaya_identity_name { font-size: 21px; }
+    .o_somaya_identity_tag { font-size: 14px; }
+}
+
+.o_somaya_headline {
+    font-size: 3.1rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: $somaya-navy;
+}
+.o_somaya_headline .o_somaya_accent { color: $somaya-mint-deep; }
+@media (max-width: 767px) { .o_somaya_headline { font-size: 2.15rem; } }
+
+.o_somaya_value_prop {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $somaya-charcoal;
+    margin-bottom: 1rem;
+    max-width: 34rem;
+}
+.o_somaya_description {
+    font-size: 1rem;
+    color: $somaya-text-muted;
+    max-width: 34rem;
+}
+
+.o_somaya_hero_visual { margin-top: 3rem; }
+@media (min-width: 992px) { .o_somaya_hero_visual { margin-top: 0; } }
+
+.o_somaya_dashboard_frame {
+    background: $somaya-navy-deep;
+    border-radius: 14px;
+    padding: 0.6rem;
+    box-shadow: 0 30px 60px -25px rgba(7, 21, 39, 0.55);
+    overflow: hidden;
+}
+.o_somaya_dashboard_frame_bar {
+    display: flex;
+    gap: 6px;
+    padding: 0.5rem 0.6rem;
+    span {
+        width: 9px; height: 9px; border-radius: 50%;
+        background: rgba(246, 247, 245, 0.25);
+    }
+}
+.o_somaya_dashboard_frame_img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    transition: transform 600ms ease;
+}
+.o_somaya_dashboard_frame:hover .o_somaya_dashboard_frame_img { transform: scale(1.015); }
+.o_somaya_dashboard_frame_lg { padding: 0.75rem; }
+
+.o_somaya_hero_caption {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: $somaya-text-muted;
+    text-align: center;
+}
+
+// ---------------------------------------------------------------------
+// Expertise strip
+// ---------------------------------------------------------------------
+.o_somaya_expertise { padding: 2rem 0; border-top: 1px solid $somaya-border; border-bottom: 1px solid $somaya-border; }
+.o_somaya_expertise_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 2rem;
+    margin: 0;
+    li {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $somaya-blue-muted;
+        letter-spacing: 0.02em;
+    }
+}
+
+// ---------------------------------------------------------------------
+// Section heads
+// ---------------------------------------------------------------------
+.o_somaya_section_head { margin-bottom: 2.5rem; text-align: center; }
+.o_somaya_section_title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.25rem; }
+
+.o_somaya_page_header {
+    background: $somaya-navy;
+    color: $somaya-offwhite;
+    padding: 4.5rem 0 3rem;
+    h1 { color: $somaya-offwhite; margin-bottom: 0.75rem; }
+}
+.o_somaya_page_header_sub { color: rgba(246,247,245,0.75); max-width: 42rem; font-size: 1.05rem; }
+
+// ---------------------------------------------------------------------
+// Selected work cards (home)
+// ---------------------------------------------------------------------
+.o_somaya_work_card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: $somaya-radius;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid $somaya-border;
+    transition: transform $somaya-transition, box-shadow $somaya-transition;
+    height: 100%;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -24px rgba(11,31,58,0.35);
+        color: inherit;
+    }
+}
+.o_somaya_work_card_img { overflow: hidden; aspect-ratio: 16/10; background: $somaya-navy-deep; }
+.o_somaya_work_card_img img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.o_somaya_work_card:hover .o_somaya_work_card_img img { transform: scale(1.04); }
+.o_somaya_work_card_body { padding: 1.1rem 1.25rem; }
+.o_somaya_work_card_number {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $somaya-mint-deep;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+}
+.o_somaya_work_card_title { display: block; font-weight: 700; color: $somaya-navy; }
+
+// ---------------------------------------------------------------------
+// Projects list — big premium cards
+// ---------------------------------------------------------------------
+.o_somaya_projects_grid { padding-top: 3.5rem; }
+.o_somaya_project_card_big {
+    border: 1px solid $somaya-border;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 2.5rem;
+    transition: box-shadow $somaya-transition, transform $somaya-transition;
+    &:hover { box-shadow: 0 26px 50px -28px rgba(11,31,58,0.3); transform: translateY(-2px); }
+}
+.o_somaya_project_card_img_col { background: $somaya-navy-deep; }
+.o_somaya_project_card_img_link { display: block; }
+.o_somaya_project_card_img_link img { width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; transition: transform 500ms ease; }
+.o_somaya_project_card_img_link:hover img { transform: scale(1.03); }
+.o_somaya_project_card_body { padding: 2.5rem; }
+@media (max-width: 991px) { .o_somaya_project_card_body { padding: 1.75rem; } }
+.o_somaya_project_card_number {
+    display: inline-block;
+    font-weight: 700;
+    color: $somaya-mint-deep;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+.o_somaya_project_card_title { margin-bottom: 0.75rem; }
+.o_somaya_project_card_desc { color: $somaya-text-muted; margin-bottom: 1rem; }
+.o_somaya_project_card_tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.o_somaya_tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: $somaya-navy;
+    background: rgba(127, 224, 193, 0.18);
+    border: 1px solid rgba(79, 201, 168, 0.35);
+    border-radius: 999px;
+    padding: 0.3rem 0.85rem;
+}
+
+// ---------------------------------------------------------------------
+// Project detail / case study
+// ---------------------------------------------------------------------
+.o_somaya_back_link {
+    display: inline-block;
+    color: rgba(246,247,245,0.8);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    &:hover { color: $somaya-mint; }
+}
+.o_somaya_project_detail_header .o_somaya_project_card_number { color: $somaya-mint; }
+.o_somaya_project_detail_header h1 { color: $somaya-offwhite; }
+.o_somaya_project_detail_subtitle { color: rgba(246,247,245,0.75); font-size: 1.1rem; }
+
+.o_somaya_project_detail_cover { padding-top: 3rem; padding-bottom: 0; }
+.o_somaya_detail_block { margin-bottom: 2.5rem; }
+.o_somaya_key_analysis ul, .o_somaya_detail_block ul { padding-inline-start: 1.2rem; }
+.o_somaya_key_analysis li, .o_somaya_detail_block li { margin-bottom: 0.55rem; color: $somaya-charcoal; }
+
+.o_somaya_sidebar {
+    background: $somaya-offwhite;
+    border: 1px solid $somaya-border;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.o_portfolio_highlight_list { list-style: none; padding: 0; margin: 0; }
+.o_portfolio_highlight_list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px dashed $somaya-border;
+    &:last-child { border-bottom: none; }
+}
+.o_portfolio_highlight_label { color: $somaya-text-muted; font-size: 0.92rem; }
+.o_portfolio_highlight_value { font-weight: 700; color: $somaya-navy; white-space: nowrap; }
+.o_portfolio_highlight_note { font-size: 0.82rem; color: $somaya-text-muted; font-style: italic; margin: 0.5rem 0; }
+
+.o_somaya_detail_actions { margin-top: 1.5rem; }
+
+.o_somaya_gallery { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.o_somaya_gallery_item {
+    display: block;
+    width: calc(50% - 0.4rem);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid $somaya-border;
+    img { width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; transition: transform 400ms ease; }
+    &:hover img { transform: scale(1.04); }
+}
+
+.o_somaya_project_next {
+    background: $somaya-navy;
+    padding: 3rem 0;
+}
+.o_somaya_project_next_link {
+    display: flex;
+    flex-direction: column;
+    color: $somaya-offwhite;
+    text-decoration: none;
+    &:hover { color: $somaya-mint; }
+}
+.o_somaya_project_next_label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(246,247,245,0.6); margin-bottom: 0.4rem; }
+.o_somaya_project_next_title { font-size: 1.6rem; font-weight: 700; }
+
+// ---------------------------------------------------------------------
+// About page
+// ---------------------------------------------------------------------
+.o_somaya_about_bio p { font-size: 1.05rem; color: $somaya-charcoal; margin-bottom: 1.1rem; }
+.o_somaya_about_how { background: $somaya-offwhite; }
+.o_somaya_flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    span:not(.o_somaya_flow_arrow) {
+        background: #fff;
+        border: 1px solid $somaya-border;
+        border-radius: 999px;
+        padding: 0.5rem 1.1rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: $somaya-navy;
+    }
+}
+.o_somaya_flow_arrow { color: $somaya-mint-deep; font-weight: 700; }
+
+.o_somaya_tag_card {
+    background: #fff;
+    border: 1px solid $somaya-border;
+    border-radius: $somaya-radius;
+    padding: 1.1rem 1.25rem;
+    font-weight: 600;
+    color: $somaya-navy;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow $somaya-transition, transform $somaya-transition;
+    &:hover { box-shadow: 0 16px 30px -20px rgba(11,31,58,0.3); transform: translateY(-2px); }
+}
+
+.o_somaya_skills { background: $somaya-navy; color: $somaya-offwhite; }
+.o_somaya_skills .o_somaya_section_title { color: $somaya-offwhite; }
+.o_somaya_skill_card {
+    background: rgba(246,247,245,0.05);
+    border: 1px solid rgba(246,247,245,0.12);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    h3 { color: $somaya-mint; font-size: 1rem; margin-bottom: 1rem; font-family: $somaya-font-body; text-transform: uppercase; letter-spacing: 0.03em; }
+    [dir="rtl"] & h3 { font-family: $somaya-font-arabic; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li {
+        font-size: 0.92rem;
+        color: rgba(246,247,245,0.85);
+        padding: 0.4rem 0;
+        border-bottom: 1px solid rgba(246,247,245,0.08);
+        &:last-child { border-bottom: none; }
+    }
+}
+
+// ---------------------------------------------------------------------
+// Contact page
+// ---------------------------------------------------------------------
+.o_somaya_contact_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid $somaya-border;
+    border-radius: 10px;
+    padding: 2.25rem 1.25rem;
+    text-decoration: none;
+    color: $somaya-navy;
+    height: 100%;
+    transition: box-shadow $somaya-transition, transform $somaya-transition;
+    &:hover { box-shadow: 0 20px 40px -24px rgba(11,31,58,0.3); transform: translateY(-3px); color: $somaya-navy; }
+}
+.o_somaya_contact_icon { font-size: 1.6rem; color: $somaya-mint-deep; margin-bottom: 0.5rem; }
+.o_somaya_contact_label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: $somaya-text-muted; }
+.o_somaya_contact_value { font-weight: 600; }
+
+// ---------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------
+.o_footer_somaya {
+    background: $somaya-navy-deep;
+    color: rgba(246,247,245,0.75);
+}
+.o_footer_somaya_name { font-family: $somaya-font-heading; font-size: 1.15rem; font-weight: 700; color: $somaya-offwhite; }
+[dir="rtl"] .o_footer_somaya_name { font-family: $somaya-font-arabic; }
+.o_footer_somaya_role { font-size: 0.9rem; color: rgba(246,247,245,0.6); margin-top: 0.2rem; }
+.o_footer_somaya_nav { display: flex; flex-direction: column; gap: 0.5rem; }
+.o_footer_somaya_nav a { color: rgba(246,247,245,0.75); text-decoration: none; font-size: 0.92rem; }
+.o_footer_somaya_nav a:hover { color: $somaya-mint; }
+.o_footer_somaya_social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(246,247,245,0.25);
+    color: rgba(246,247,245,0.85);
+    text-decoration: none;
+    transition: background-color $somaya-transition, color $somaya-transition, border-color $somaya-transition;
+    &:hover { background: $somaya-mint; color: $somaya-navy-deep; border-color: $somaya-mint; }
+}
+.o_footer_somaya_divider { border-color: rgba(246,247,245,0.12); margin: 1.5rem 0 1rem; }
+.o_footer_somaya_copy { font-size: 0.8rem; color: rgba(246,247,245,0.5); text-align: center; }
+
+// ---------------------------------------------------------------------
+// Fade-in on scroll
+// ---------------------------------------------------------------------
+.o_somaya_reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 700ms ease, transform 700ms ease;
+}
+.o_somaya_reveal.o_somaya_revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .o_somaya_reveal, .o_somaya_reveal.o_somaya_revealed {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+// ---------------------------------------------------------------------
+// Focus states / accessibility
+// ---------------------------------------------------------------------
+.o_somaya_home a:focus-visible,
+.o_somaya_about a:focus-visible,
+.o_somaya_contact a:focus-visible,
+.o_somaya_projects_list a:focus-visible,
+.o_somaya_project_detail a:focus-visible {
+    outline: 2px solid $somaya-mint-deep;
+    outline-offset: 2px;
+}
+
+// ---------------------------------------------------------------------
+// RTL adjustments
+// ---------------------------------------------------------------------
+[dir="rtl"] {
+    .o_somaya_identity { flex-direction: row-reverse; }
+    .o_footer_somaya_row { text-align: right; }
+    .o_somaya_project_card_number,
+    .o_somaya_work_card_number { direction: ltr; display: inline-block; }
+}

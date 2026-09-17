@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Arabic translations of the translatable fields on each portfolio.project record.
+         These records reuse the English xmlids under an ar_001 language context,
+         so Odoo stores them as translations rather than new records. -->
+
+    <record id="project_01_donation" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">لوحة أداء التبرعات</field>
+        <field name="overview">لوحة تحكم تفاعلية مصممة باستخدام Power BI لتحليل أداء التبرعات عبر الحملات المختلفة. توفر اللوحة نظرة عامة على أهم مؤشرات التبرعات، مع إمكانية استكشاف نشاط التبرعات حسب نوع الحملة والسنة والشهر وطريقة الدفع.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>تحليل إجمالي مبالغ التبرعات ونشاط التبرعات عبر الحملات المختلفة.</li>
+<li>تحديد الحملات الأعلى أداءً بناءً على قيمة التبرعات.</li>
+<li>تحليل اتجاهات التبرعات الشهرية.</li>
+<li>مقارنة أداء التبرعات بين أنواع الحملات المختلفة.</li>
+<li>تحليل توزيع التبرعات حسب طريقة الدفع.</li>
+<li>استخدام تحليل مؤشرات الأداء (KPI) لتقديم نظرة عامة موجزة عن الأداء الإجمالي.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">إجمالي التبرعات</span><span class="o_portfolio_highlight_value">SAR 1.53M</span></li>
+<li><span class="o_portfolio_highlight_label">عدد المتبرعين</span><span class="o_portfolio_highlight_value">1K</span></li>
+<li><span class="o_portfolio_highlight_label">متوسط قيمة التبرع</span><span class="o_portfolio_highlight_value">SAR 37</span></li>
+<li><span class="o_portfolio_highlight_label">أعلى قيمة تبرع</span><span class="o_portfolio_highlight_value">SAR 20K</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel، Power BI، Power Query، DAX، تحليل مؤشرات الأداء (KPI)</field>
+    </record>
+
+    <record id="project_02_madinah" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">تحليل سوق العقارات في المدينة المنورة</field>
+        <field name="overview">لوحة تحكم تفاعلية باستخدام Power BI لتحليل أسعار العقارات والاتجاهات السنوية لأسعار الإيجارات في مختلف مناطق المدينة المنورة. يقدم المشروع رؤى حول أسعار العقارات وقيم الإيجارات وتصنيفات العقارات والتغيرات في السوق بين عامي 2019 و2024.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>تحليل متوسط أسعار الإيجارات السنوية في مختلف مناطق المدينة المنورة.</li>
+<li>مقارنة أسعار الإيجارات بين عامي 2019 و2024.</li>
+<li>تحليل أسعار العقارات بناءً على الموقع وتصنيف العقار.</li>
+<li>مقارنة فئتي العقارات السكنية والتجارية.</li>
+<li>دراسة الاتجاهات السنوية للإيجارات من 2019 إلى 2024.</li>
+<li>إنشاء تصفية تفاعلية حسب السنة والموقع ونوع العقار.</li>
+</ul></field>
+        <field name="tools">Microsoft Excel، Power BI، تحليل مؤشرات الأداء (KPI)، جمع البيانات، تحويل البيانات</field>
+    </record>
+
+    <record id="project_03_sales" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">لوحة أداء المبيعات مقابل المستهدف</field>
+        <field name="overview">لوحة تحكم تفاعلية باستخدام Power BI لتحليل أداء المبيعات مقارنة بالأهداف التجارية. توفر اللوحة رؤية واضحة لإجمالي المبيعات والمستهدفات وفجوات الأداء، مع إمكانية التحليل عبر فترات زمنية مختلفة وشرائح عملاء وفئات منتجات متعددة.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>مقارنة أداء المبيعات الفعلي بالمستهدفات المحددة.</li>
+<li>قياس الفجوة بين المبيعات الفعلية والمستهدفة.</li>
+<li>تحليل اتجاهات المبيعات الشهرية.</li>
+<li>مقارنة فئات Technology وFurniture وOffice Supplies.</li>
+<li>تقييم شرائح العملاء Consumer وCorporate وHome Office.</li>
+<li>استخدام نسب الإنجاز لتقييم الأداء مقابل المستهدفات.</li>
+<li>إضافة تصفية تفاعلية حسب السنة والشريحة والفئة.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">إجمالي المبيعات</span><span class="o_portfolio_highlight_value">~SAR 2M</span></li>
+<li><span class="o_portfolio_highlight_label">إجمالي المستهدف</span><span class="o_portfolio_highlight_value">~SAR 2M</span></li>
+<li><span class="o_portfolio_highlight_label">فجوة المستهدف</span><span class="o_portfolio_highlight_value">SAR 57K</span></li>
+<li><span class="o_portfolio_highlight_label">مبيعات Technology</span><span class="o_portfolio_highlight_value">SAR 836K</span></li>
+<li><span class="o_portfolio_highlight_label">مبيعات Furniture</span><span class="o_portfolio_highlight_value">SAR 742K</span></li>
+<li><span class="o_portfolio_highlight_label">مبيعات Office Supplies</span><span class="o_portfolio_highlight_value">SAR 719K</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel، Power BI، ذكاء الأعمال (Business Intelligence)، تحليل الأداء التجاري، تحليل مؤشرات الأداء والمستهدفات</field>
+    </record>
+
+    <record id="project_04_budget" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">التحليل المالي لميزانية المملكة العربية السعودية</field>
+        <field name="overview">لوحة تحكم تفاعلية باستخدام Power BI لتحليل أداء ميزانية المملكة العربية السعودية، وتشمل النتائج الفعلية التاريخية وتقديرات الميزانية والتوقعات المستقبلية. توفر اللوحة رؤية موحدة للإيرادات والمصروفات الحكومية والدين العام وعجز الميزانية والإنفاق على مستوى القطاعات.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>مقارنة الإيرادات والمصروفات الحكومية عبر الفترات الفعلية والمُقدَّرة والمتوقعة.</li>
+<li>تحليل العلاقة بين الإيرادات والمصروفات.</li>
+<li>متابعة الدين العام وعجز الميزانية.</li>
+<li>تحليل توزيع الإنفاق الحكومي على القطاعات الرئيسية.</li>
+<li>تقييم عجز الميزانية كنسبة من الإيرادات.</li>
+<li>تحليل توزيع الإنفاق عبر التصنيفات الرئيسية.</li>
+<li>استخدام مقاييس DAX ومؤشرات الأداء في التحليل المالي.</li>
+<li>دمج البيانات التاريخية والمُقدَّرة والمتوقعة في لوحة تحليلية موحدة.</li>
+</ul></field>
+        <field name="highlights" type="html"><p class="o_portfolio_highlight_note">ميزانية السنة المالية 2026</p>
+<ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">إجمالي الإيرادات</span><span class="o_portfolio_highlight_value">SAR 1,147 billion</span></li>
+<li><span class="o_portfolio_highlight_label">إجمالي المصروفات</span><span class="o_portfolio_highlight_value">SAR 1,313 billion</span></li>
+<li><span class="o_portfolio_highlight_label">الدين العام</span><span class="o_portfolio_highlight_value">SAR 1,622 billion</span></li>
+<li><span class="o_portfolio_highlight_label">عجز الميزانية</span><span class="o_portfolio_highlight_value">SAR 165 billion</span></li>
+<li><span class="o_portfolio_highlight_label">عجز الميزانية كنسبة من الإيرادات</span><span class="o_portfolio_highlight_value">14.4%</span></li>
+<li><span class="o_portfolio_highlight_label">أكبر تخصيص قطاعي</span><span class="o_portfolio_highlight_value">الصحة والتنمية الاجتماعية (19.7%)</span></li>
+</ul>
+<p class="o_portfolio_highlight_note">يغطي التحليل الفترة من النتائج الفعلية لعام 2024 حتى توقعات عام 2028.</p></field>
+        <field name="tools">Microsoft Excel، Power BI، Power Query، DAX، تحليل الميزانية ومؤشرات الأداء، التحليل المالي والأعمال</field>
+    </record>
+
+    <record id="project_05_risk" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">لوحة مراقبة المخاطر التشغيلية</field>
+        <field name="overview">لوحة تحكم تفاعلية باستخدام Power BI لمراقبة وتحليل المخاطر التشغيلية عبر مختلف الإدارات والفترات الزمنية. توفر اللوحة رؤية مركزية لحالة المخاطر وفئاتها ومستوى خطورتها ومؤشرات المخاطر الرئيسية لدعم المراقبة المنظمة وترتيب الأولويات.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>مراقبة المخاطر التشغيلية خلال عامي 2025 و2026.</li>
+<li>متابعة إجمالي المخاطر والمخاطر المفتوحة والحرجة.</li>
+<li>تصنيف المخاطر حسب الحالة: مغلقة، مفتوحة، وتحت المعالجة.</li>
+<li>تحليل توزيع المخاطر عبر الفئات المختلفة.</li>
+<li>استخدام مصفوفة المخاطر (Risk Matrix) لتقييم الاحتمالية والتأثير.</li>
+<li>تحديد المخاطر الحرجة ومقارنتها بالمستهدف المحدد.</li>
+<li>عرض تفاصيل كل خطر على مستوى السجل، تشمل رقم الخطر والفئة والمصدر والإدارة والحالة والدرجة وفترة الإبلاغ.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">إجمالي المخاطر</span><span class="o_portfolio_highlight_value">60</span></li>
+<li><span class="o_portfolio_highlight_label">المخاطر المفتوحة</span><span class="o_portfolio_highlight_value">18</span></li>
+<li><span class="o_portfolio_highlight_label">المخاطر الحرجة</span><span class="o_portfolio_highlight_value">12</span></li>
+<li><span class="o_portfolio_highlight_label">المستهدف للمخاطر الحرجة</span><span class="o_portfolio_highlight_value">10</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel، Power BI، DAX، تحليل المخاطر، مؤشرات المخاطر الرئيسية (KRIs)، مصفوفة المخاطر (Risk Matrix)</field>
+    </record>
+
+    <record id="project_06_growth" model="portfolio.project" context="{'lang': 'ar_001'}">
+        <field name="name">خلف النمو</field>
+        <field name="subtitle">نظرة معمقة على اتجاهات الائتمان الاستهلاكي في السعودية</field>
+        <field name="overview">لوحة تحليل مالي وسلوك استهلاكي طُوِّرت باستخدام Power BI لاستكشاف اتجاهات الائتمان الاستهلاكي والإنفاق في السعودية عبر الزمن. يتناول المشروع نمو الإقراض الاستهلاكي، ونشاط بطاقات الائتمان، وجودة القروض، وربحية القطاع المصرفي، ومؤشرات السيولة، والتحولات في أنماط الإنفاق الاستهلاكي.</field>
+        <field name="key_analysis" type="html"><ul>
+<li>مقارنة النمو الفصلي للقروض الاستهلاكية وقروض بطاقات الائتمان.</li>
+<li>تحليل اتجاهات نسبة القروض المتعثرة (NPL Ratio).</li>
+<li>متابعة العائد على الأصول (ROA) والعائد على حقوق الملكية (ROE).</li>
+<li>دراسة مؤشرات نسبة الإقراض إلى الودائع.</li>
+<li>مقارنة الإنفاق الاستهلاكي والتمويل عبر فئات مثل تجديد المنازل والأثاث والمركبات وبطاقات الائتمان.</li>
+<li>استخدام تحليل الاتجاه الفصلي لتحديد التغيرات في سلوك الاقتراض والإنفاق الاستهلاكي.</li>
+<li>بناء مؤشرات أداء مالية لتلخيص نمو الائتمان وجودة القروض والأداء المصرفي.</li>
+</ul></field>
+        <field name="highlights" type="html"><ul class="o_portfolio_highlight_list">
+<li><span class="o_portfolio_highlight_label">أحدث قيمة للقروض الاستهلاكية</span><span class="o_portfolio_highlight_value">477K</span></li>
+<li><span class="o_portfolio_highlight_label">أحدث نمو فصلي</span><span class="o_portfolio_highlight_value">1.44%</span></li>
+<li><span class="o_portfolio_highlight_label">أقوى ارتفاع فصلي</span><span class="o_portfolio_highlight_value">2.20%</span></li>
+<li><span class="o_portfolio_highlight_label">أكبر انخفاض فصلي</span><span class="o_portfolio_highlight_value">-2.09%</span></li>
+<li><span class="o_portfolio_highlight_label">أحدث نسبة للمطالبات الخاصة إلى الودائع</span><span class="o_portfolio_highlight_value">106.81%</span></li>
+<li><span class="o_portfolio_highlight_label">نسبة القروض المتعثرة (NPL)</span><span class="o_portfolio_highlight_value">تراجعت من 1.60% إلى 1.10%</span></li>
+<li><span class="o_portfolio_highlight_label">أحدث نسبة إقراض إلى ودائع (LTD)</span><span class="o_portfolio_highlight_value">80.45%</span></li>
+</ul></field>
+        <field name="tools">Microsoft Excel، Power BI، Power Query، DAX، تحليل السلوك الاستهلاكي، تحليل الإنفاق الاستهلاكي، تحليل مؤشرات الأداء المالي، تحليل الاتجاهات</field>
+    </record>
+
+</odoo>
