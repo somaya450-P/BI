@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <template id="head_custom" inherit_id="website.layout" name="Somaya Portfolio Fonts">
+        <xpath expr="//head" position="inside">
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;display=swap"/>
+        </xpath>
+    </template>
+
     <template id="footer_custom" inherit_id="website.layout" name="Somaya Portfolio Footer">
         <xpath expr="//footer" position="replace">
             <footer id="bottom" class="o_footer_somaya">
